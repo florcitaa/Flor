@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity"
+    android:background ="#efe2e214"
+
+   >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="#088A08">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:contexto="MyActivity"
+            android:background="#0040FF"
+            android:layout_alignParectTop="true"
+            android:layout_alignParectLeft="true"
+            android:layout_alignParectStart="true" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Registro de Pedidos
+                &quot;EN RESTAURANTES &quot;"
+                android:textColor="#DF01D7"
+                android:backgroundTint="#DF013A"
+                android:textSize="20dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Numero de Cliente:"
+                android:id="@+id/texView"
+                android:textColor="#2EFEC8"
+                android:background="#FF8000"
+                android:textSize="20dp"
+                android:layout_marginTop="2dp"/>
+
+            <EditText
+                android:layout_width="203dp"
+                android:layout_height="37dp"
+                android:id="@+id/pedidos"
+                android:background="#2ECCFA"
+                android:textColor="#FE2E2E"
+                android:inputType="number"
+                android:textIsSelectable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nombre del Cliente"
+                android:id="@+id/texView2"
+                android:background="#4C0B5F"
+                android:textColor="#01A9DB"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"/>/>
+
+
+            <EditText
+                android:layout_width="301dp"
+                android:layout_height="35dp"
+                android:id="@+id/cliente"
+                android:background="#8A0868"
+                android:textColor="#40FF00"
+                android:inputType="text"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="cartas de comidas"
+                android:id="@+id/texView5"
+                android:textColor="#6E6E6E"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="182dp"
+                android:layout_height="35dp"
+                android:id="@+id/direccion"
+                android:background="#BFFF00"
+                android:inputType="number"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="cantidad por cobrar"
+                android:id="@+id/texView3"
+                android:textColor="#298A08"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="192dp"
+                android:layout_height="33dp"
+                android:id="@+id/cantidad"
+                android:background="#A5DF00"
+                android:inputType="number"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Direccion"
+                android:id="@+id/texView4"
+                android:textColor="#8904B1"
+                android:textSize="20dp"
+                android:layout_marginTop="3dp"/>
+
+
+            <EditText
+                android:layout_width="307dp"
+                android:layout_height="37dp"
+                android:id="@+id/cobrar"
+                android:background="#088A68"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="GUARDAR"
+                    android:id="@+id/btn_guardar"
+                    android:onClick="guarpedido"
+                    android:layout_weight="0.50"
+                    android:layout_marginTop="3dp"
+
+                    android:background="#58ACFA"
+                    android:textColor="#01DF01"
+                    android:textSize="25dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar"
+                    android:id="@+id/btn_eliminar"
+                    android:onClick="eliminarpedido"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_weight="1"
+                    android:background="#2EFEF7"
+                    android:textColor="#C8FE2E"
+                    android:textSize="20dp"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="consutlar"
+                    android:id="@+id/btn_consultar"
+                    android:layout_marginTop="8dp"
+
+                    android:onClick="consultapedido"
+
+                    android:layout_weight="1"
+                    android:background="#FE2EF7"
+                    android:textColor="#58FAD0"
+                    android:textSize="15dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Modificar"
+                    android:id="@+id/btn_modificar"
+                    android:onClick="modificacionpedido"
+                    android:layout_marginTop="8dp"
+
+
+                    android:layout_weight="1"
+                    android:background="#B404AE"
+                    android:textColor="#2EFE2E"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
